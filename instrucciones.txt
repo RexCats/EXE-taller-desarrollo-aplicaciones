@@ -1,0 +1,13 @@
+Descargar mysql installer
+-seleccionar:
+	-mysql server
+	-mysql workbench
+	-python connector
+
+-configurar mysql server sin contraseña y como servicio windows (esperar hasta que se habilite la opcion)
+-hecho lo anterior revisar en servicios si esta presente MYSQL80
+-abrir worbench y crear una nueva conexion:
+	-nombre elloco
+	-localhost (cambiar el 127.... por localhost)
+	-crear nuevo esquema y agregar el archivo sql elloco.sql
+	-ejecutar el script
