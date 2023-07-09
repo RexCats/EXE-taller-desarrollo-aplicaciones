@@ -93,7 +93,7 @@ CREATE TABLE `colaborador` (
   `ID_usuarios` int(11) NOT NULL,
   PRIMARY KEY (`ID_colaborador`),
   UNIQUE KEY `ID_colaborador__UNIQUE` (`ID_colaborador`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `colaborador` (
 
 LOCK TABLES `colaborador` WRITE;
 /*!40000 ALTER TABLE `colaborador` DISABLE KEYS */;
-INSERT INTO `colaborador` VALUES (1,'jefebodega',1),(2,'bodeguero',2),(3,'admin',3),(4,'admin',1),(5,'bodeguero',2),(6,'prueba3',3),(7,'prueba4',5);
+INSERT INTO `colaborador` VALUES (1,'jefebodega',1),(2,'bodeguero',2),(3,'admin',3),(4,'admin',1),(5,'bodeguero',2),(6,'prueba3',3),(7,'prueba4',5),(8,'admin',6);
 /*!40000 ALTER TABLE `colaborador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +123,7 @@ CREATE TABLE `colaborador_credenciales` (
   UNIQUE KEY `ID_credencial__UNIQUE` (`ID_credencial`),
   KEY `fk_colaborador_col_cred` (`ID_colaborador`),
   CONSTRAINT `fk_colaborador_col_cred` FOREIGN KEY (`ID_colaborador`) REFERENCES `colaborador` (`ID_colaborador`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,7 +132,7 @@ CREATE TABLE `colaborador_credenciales` (
 
 LOCK TABLES `colaborador_credenciales` WRITE;
 /*!40000 ALTER TABLE `colaborador_credenciales` DISABLE KEYS */;
-INSERT INTO `colaborador_credenciales` VALUES (1,1,'jefebodega',12345,1),(2,2,'bodeguero',12345,2),(3,3,'admin',12345,3),(5,1,'benja1122',12345,3),(6,2,'prueba2',12345,3),(7,3,'prueba3',12345,1),(8,7,'prueba4',12345,1);
+INSERT INTO `colaborador_credenciales` VALUES (1,1,'jefebodega',12345,1),(2,2,'bodeguero',12345,2),(3,3,'admin',12345,3),(5,1,'benja1122',12345,3),(6,2,'prueba2',12345,3),(7,3,'prueba3',12345,1),(8,7,'prueba4',12345,1),(9,8,'prueba1',12345,3);
 /*!40000 ALTER TABLE `colaborador_credenciales` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,7 +241,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'2023-07-01 13:48:45.',50,'revistas'),(2,'2023-07-01 13:51:07.',30,'libros'),(3,'2023-07-02 11:56:04.',40,'agendas');
+INSERT INTO `productos` VALUES (1,'2023-07-01 13:48:45.',50,'revistas'),(2,'2023-07-01 13:51:07.',30,'libros'),(3,'2023-07-02 11:56:04.',40,'agendas'),(4,'2023-07-08 16:55:38.',50,'Libros');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,7 +263,7 @@ CREATE TABLE `usuarios` (
   `numero_c` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID_usuarios`),
   UNIQUE KEY `ID_usuarios__UNIQUE` (`ID_usuarios`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -272,7 +272,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'202425607','benja1','soto1','gonzalez1','benjamin@s.com','dsdas',22),(2,'202425608','benja2','soto2','gonzalez2','benjamin@s.com','asdas',2),(3,'202425609','benja3','soto3','gonzalez3','benjamin@s.com','asdas',222),(4,'2024256010','benja4','soto4','gonzalez4','benjamin@soto.com','sdsds',696969),(5,'202425606','prueba1','prueba1','prueba1','benjaminsoto661@hotm','sdasda',2322313);
+INSERT INTO `usuarios` VALUES (1,'202425607','benja1','soto1','gonzalez1','benjamin@s.com','dsdas',22),(2,'202425608','benja2','soto2','gonzalez2','benjamin@s.com','asdas',2),(3,'202425609','benja3','soto3','gonzalez3','benjamin@s.com','asdas',222),(4,'2024256010','benja4','soto4','gonzalez4','benjamin@soto.com','sdsds',696969),(5,'202425606','prueba1','prueba1','prueba1','benjaminsoto661@hotm','sdasda',2322313),(6,'202325703','prueba','prueba','prueba','prueba@prueba.cl','calle diez 4587',37273283);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -285,4 +285,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-02 13:51:44
+-- Dump completed on 2023-07-09 12:36:16
